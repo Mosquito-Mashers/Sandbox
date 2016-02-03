@@ -7,11 +7,13 @@ Items to be claimed in backlog: [![Stories in Ready](https://badge.waffle.io/Mos
 
 [Issues](https://github.com/Mosquito-Mashers/[REPO-NAME]/issues) | [Milestones](https://github.com/Mosquito-Mashers/[REPO-NAME]/milestones) | [Metrics](https://github.com/Mosquito-Mashers/[REPO-NAME]/graphs/contributors)
 ___
+
 ## About
 General info about the app
 * What does it do?
 * Who is the target audience
 * what cloud aspects are there?
+
 ## Development Environment
 ___
 What tools we use
@@ -26,12 +28,16 @@ What tools we use
 * JUnit
 * Travis CI
 * Java
+
 ## Architechure
 ___
 Different diagrams and methodologies used
+
 ## Contributing
 ___
+
 How to contribute to the project
+
 1. Clone repo into local machine
 2. Build and run (master branch should be clean)
 3. checkout new branch
@@ -59,6 +65,7 @@ How to contribute to the project
     * On Github, select your branch from the dropdown menu and click the button to create ***New Pull Request***
     * Either replace the pull requests title with ***Fixes #issue_number*** or put ***Fixes #issue_number*** in the body of the pull request
     * Leave a comment using the @mention for another team memeber to review the code
+
 ## Integration
 ___
 Our integration strategy
