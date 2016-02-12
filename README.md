@@ -67,8 +67,6 @@ How to contribute to the project
     * Either replace the pull requests title with ***Fixes #issue_number*** or put ***Fixes #issue_number*** in the body of the pull request
     * Leave a comment using the @mention for another team memeber to review the code
 
-## Integration
-___
-Our integration strategy
+Apples 
 
 The master branch is protected based on the build results from Travis CI, this way we are guaranteed a working build on the master branch. We are implementing the feature branch workflow. A developer will checkout a branch and label it in accordance with the task they plan to achieve. After they have made their changes and commited them to their checked out branch they will initiate an automated build through travis-ci.org; this is done by pushing to their checked out branch. Upon a successful build, they will initiate a pull request which will be reviewed and tested before being merged with the master branch.
