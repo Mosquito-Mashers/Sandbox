@@ -1,24 +1,29 @@
 package com.example.russell_test.myapplication;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 public class LocationActivity extends AppCompatActivity implements LocationListener {
     protected LocationManager locationManager;
     protected LocationListener locationListener;
     protected Context context;
     TextView txtLat;
+    TextView txtLocation;
     String lat;
     String provider;
     protected String latitude, longitude;
@@ -46,7 +51,31 @@ public class LocationActivity extends AppCompatActivity implements LocationListe
     @Override
     public void onLocationChanged(Location location) {
         txtLat = (TextView) findViewById(R.id.textview1);
-        txtLat.setText("Latitude:" + location.getLatitude() + ", Longitude:" + location.getLongitude());
+        txtLocation = (TextView) findViewById(R.id.realLocation);
+        double lat = location.getLatitude();
+        double longt = location.getLongitude();
+        txtLat.setText("Latitude:" + lat + ", Longitude:" + longt);
+        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+        try {
+            List<Address> listAddresses = geocoder.getFromLocation(lat, longt, 1);
+            txtLocation.setText("Trying to get location");
+            if(listAddresses.size() > 0){
+                Address address= listAddresses.get(0);
+                String locality=address.getLocality();
+                String city=address.getCountryName();
+                String region_code=address.getCountryCode();
+                String zipcode=address.getPostalCode();
+
+                txtLocation.setText(address.getAddressLine(0));
+
+            }
+            else {
+                //txtLocation.setText("Cant resolve to an address!!!");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
