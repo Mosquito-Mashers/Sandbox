@@ -15,6 +15,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -34,6 +35,36 @@ public class LocationActivity extends AppCompatActivity implements LocationListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
         txtLat = (TextView) findViewById(R.id.textview1);
+
+        ArrayList<Location> locationContainer = new ArrayList<Location>();
+
+        Location loc1 = new Location("");
+        Location loc2= new Location("");
+        Location loc3= new Location("");
+
+        loc1.setLatitude(33.789025);
+        loc1.setLongitude(-118.149880);
+        loc2.setLatitude(33.769210);
+        loc2.setLongitude(-118.197935);
+        loc3.setLatitude(34.428078);
+        loc3.setLongitude(-119.650776);
+
+
+        locationContainer.add(loc1);
+        locationContainer.add(loc2);
+        locationContainer.add(loc3);
+
+        Location mid;
+
+        mid = this.getMidLocation(locationContainer);
+        Address ad;
+
+        ad = this.getAddress(mid);
+
+        TextView tv = (TextView) findViewById(R.id.realLocation);
+
+        tv.setText(ad.getAddressLine(0));
+
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -58,7 +89,7 @@ public class LocationActivity extends AppCompatActivity implements LocationListe
         Geocoder geocoder = new Geocoder(this, Locale.getDefault());
         try {
             List<Address> listAddresses = geocoder.getFromLocation(lat, longt, 1);
-            txtLocation.setText("Trying to get location");
+            //txtLocation.setText("Trying to get location");
             if(listAddresses.size() > 0){
                 Address address= listAddresses.get(0);
                 String locality=address.getLocality();
@@ -66,7 +97,7 @@ public class LocationActivity extends AppCompatActivity implements LocationListe
                 String region_code=address.getCountryCode();
                 String zipcode=address.getPostalCode();
 
-                txtLocation.setText(address.getAddressLine(0));
+                //txtLocation.setText(address.getAddressLine(0));
 
             }
             else {
@@ -91,5 +122,50 @@ public class LocationActivity extends AppCompatActivity implements LocationListe
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {
         Log.d("Latitude","status");
+    }
+
+    private Address getAddress(Location location)
+    {
+        Address address = null;
+        double lat = location.getLatitude();
+        double longt = location.getLongitude();
+
+        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+
+        try
+        {
+            List<Address> listAddresses = geocoder.getFromLocation(lat, longt, 1);
+            if(listAddresses.size() > 0)
+            {
+                address = listAddresses.get(0);
+            }
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        return address;
+    }
+
+    private Location getMidLocation(ArrayList<Location> locations)
+    {
+        Location midLocation = new Location("");
+
+        double sumX = 0;
+        double sumY = 0;
+
+        int k = 0;
+        int locCount = locations.size();
+
+        for(k = 0; k < locCount; k++)
+        {
+            sumX += locations.get(k).getLatitude();
+            sumY += locations.get(k).getLongitude();
+        }
+
+        midLocation.setLatitude( sumX / locCount);
+        midLocation.setLongitude(sumY / locCount);
+
+        return midLocation;
     }
 }
