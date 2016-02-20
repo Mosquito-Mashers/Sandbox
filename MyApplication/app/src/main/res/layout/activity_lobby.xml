@@ -16,96 +16,241 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Button
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2">
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ahjsdlkajdkl"/>
+                android:text="@string/welcomeMessage"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="35dp"
+                android:layout_weight="1"/>
             <Button
+                android:id="@+id/createEvent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ahjsdlkajdkl"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ahjsdlkajdkl"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ahjsdlkajdkl"/>
+                android:text="Start an Event"
+                android:layout_weight="1"/>
         </LinearLayout>
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <Button
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ahjsdlkajdkl"/>
-                <Button
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ahjsdlkajdkl"/>
-                <Button
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ahjsdlkajdkl"/>
-                <Button
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ahjsdlkajdkl"/>
-                <Button
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ahjsdlkajdkl"/>
-                <Button
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ahjsdlkajdkl"/>
-                <Button
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ahjsdlkajdkl"/>
-                <Button
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ahjsdlkajdkl"/>
-                <Button
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ahjsdlkajdkl"/>
-                <Button
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ahjsdlkajdkl"/>
-                <Button
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ahjsdlkajdkl"/>
-                <Button
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ahjsdlkajdkl"/>
-                <Button
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ahjsdlkajdkl"/>
-                <Button
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ahjsdlkajdkl"/>
-                <Button
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ahjsdlkajdkl"/>
-                <Button
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="END"/>
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/><TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/><TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sample Event"/>
+
+
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

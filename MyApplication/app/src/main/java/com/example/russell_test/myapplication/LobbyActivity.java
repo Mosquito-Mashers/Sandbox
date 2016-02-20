@@ -10,15 +10,25 @@ import android.widget.TextView;
 public class LobbyActivity extends AppCompatActivity {
 
     Intent intent;
+    Intent createEventIntent;
 
     Button getIntent;
     TextView text;
+    Button createEvent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lobby);
+        createEvent = (Button) findViewById(R.id.createEvent);
+        createEventIntent = new Intent(this, EventCreationActivity.class);
 
+        createEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(createEventIntent);
+            }
+        });
 
         //text = (TextView) findViewById(R.id.);
 
