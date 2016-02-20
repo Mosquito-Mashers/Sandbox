@@ -22,6 +22,7 @@ public class LocationActivity extends AppCompatActivity implements LocationListe
     protected LocationListener locationListener;
     protected Context context;
     TextView txtLat;
+    TextView relativeAddress;
     Button simLogin;
     String lat;
     String provider;
@@ -62,8 +63,10 @@ public class LocationActivity extends AppCompatActivity implements LocationListe
     }
     @Override
     public void onLocationChanged(Location location) {
-        txtLat = (TextView) findViewById(R.id.textview1);
+        txtLat = (TextView) findViewById(R.id.currentLocation);
         txtLat.setText("Latitude:" + location.getLatitude() + ", Longitude:" + location.getLongitude());
+
+        
     }
 
     @Override
